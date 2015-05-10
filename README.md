@@ -3,6 +3,8 @@
 
  Documentation has moved to http://www.marlinfirmware.org
 
+ This fork is intended to be compatible with Lulzbot Taz 5
+
 ## Current Status: Bug Fixing
 
 The Marlin development is currently revived. There's a long list of reported issues and pull requests, which we are working on currently.

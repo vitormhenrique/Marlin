@@ -121,23 +121,23 @@ static void lcd_implementation_init()
 	u8g.firstPage();
 	do {
 			// RepRap init bmp
-			u8g.drawBitmapP(0,0,START_BMPBYTEWIDTH,START_BMPHEIGHT,start_bmp);
+			//u8g.drawBitmapP(0,0,START_BMPBYTEWIDTH,START_BMPHEIGHT,start_bmp);
+			// LulzBot init bmp
+			u8g.drawBitmapP(0,0,LULZBOT_BMPBYTEWIDTH,LULZBOT_BMPHEIGHT,lulzbot_bmp);
 			// Welcome message
+			u8g.setFont(u8g_font_10x20);
+			u8g.drawStr(61,17,"TAZ");
+			u8g.setFont(u8g_font_5x8);
+			u8g.drawStr(93,17,"v5.0");
 			u8g.setFont(u8g_font_6x10_marlin);
-			u8g.drawStr(62,10,"MARLIN"); 
+			u8g.drawStr(63,29,"3D Printer");
 			u8g.setFont(u8g_font_5x8);
-			u8g.drawStr(62,19,"V1.0.0 RC2-mm");
-			u8g.setFont(u8g_font_6x10_marlin);
-			u8g.drawStr(62,28,"by ErikZalm");
-			u8g.drawStr(62,41,"DOGM128 LCD");
+			u8g.drawStr(63,41,"LulzBot.com");
 			u8g.setFont(u8g_font_5x8);
-			u8g.drawStr(62,48,"enhancements");
-			u8g.setFont(u8g_font_5x8);
-			u8g.drawStr(62,55,"by STB, MM");
-			u8g.drawStr(62,61,"uses u");
-			u8g.drawStr90(92,57,"8");
-			u8g.drawStr(100,61,"glib");
+			u8g.drawStr(63,53,"Firmware:");
+			u8g.drawStr(63,62,"Marlin VMH1.0");
 	   } while( u8g.nextPage() );
+delay(1500);
 }
 
 static void lcd_implementation_clear()

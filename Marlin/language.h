@@ -51,7 +51,7 @@
   #ifdef CUSTOM_MENDEL_NAME
     #define MACHINE_NAME CUSTOM_MENDEL_NAME
   #else
-    #define MACHINE_NAME "Mendel"
+    #define MACHINE_NAME "Taz"
   #endif
 
 // Default firmware set to Mendel
