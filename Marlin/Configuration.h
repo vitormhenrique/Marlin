@@ -157,10 +157,15 @@
 
 // If you are using a preconfigured hotend then you can use one of the value sets by uncommenting it
 
-// AO-Hexagon (24V)
+/* //AO-Hexagon (24V) Original
     #define  DEFAULT_Kp 28.79
     #define  DEFAULT_Ki 1.91
-    #define  DEFAULT_Kd 108.51
+    #define  DEFAULT_Kd 108.51*/
+
+// AO-Hexagon (24V)
+    #define  DEFAULT_Kp 31.18
+    #define  DEFAULT_Ki 2.27
+    #define  DEFAULT_Kd 106.98
 
 // Buda 2.0 on 24V
 //    #define  DEFAULT_Kp 6
@@ -424,15 +429,15 @@ const bool Z_MAX_ENDSTOP_INVERTING = true; // set to true to invert the logic of
   // X and Y offsets must be integers
   #define X_PROBE_OFFSET_FROM_EXTRUDER -10
   #define Y_PROBE_OFFSET_FROM_EXTRUDER -32
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER -1.5
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER -1.15
 
-  #define Z_RAISE_BEFORE_HOMING 1       // (in mm) Raise Z before homing (G28) for Probe Clearance.
+  #define Z_RAISE_BEFORE_HOMING 15       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
 
   #define XY_TRAVEL_SPEED 8000         // X and Y axis travel speed between probes, in mm/min
 
-  #define Z_RAISE_BEFORE_PROBING 1    //How much the extruder will be raised before traveling to the first probing point.
-  #define Z_RAISE_BETWEEN_PROBINGS 1  //How much the extruder will be raised when traveling from between next probing points
+  #define Z_RAISE_BEFORE_PROBING 10    //How much the extruder will be raised before traveling to the first probing point.
+  #define Z_RAISE_BETWEEN_PROBINGS 10  //How much the extruder will be raised when traveling from between next probing points
 
   //#define Z_PROBE_SLED // turn on if you have a z-probe mounted on a sled like those designed by Charles Bell
   //#define SLED_DOCKING_OFFSET 5 // the extra distance the X axis must travel to pickup the sled. 0 should be fine but you can push it further if you'd like.

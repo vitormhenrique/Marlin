@@ -39,6 +39,9 @@
 #include "ultralcd.h"
 #include "ultralcd_st7920_u8glib_rrd.h"
 
+// Fancy sounds
+#include "pitches.h"
+
 /* Russian language not supported yet, needs custom font
 
 #ifdef LANGUAGE_RU
@@ -137,7 +140,6 @@ static void lcd_implementation_init()
 			u8g.drawStr(63,53,"Firmware:");
 			u8g.drawStr(63,62,"Marlin VMH1.0");
 	   } while( u8g.nextPage() );
-delay(1500);
 }
 
 static void lcd_implementation_clear()
@@ -460,10 +462,10 @@ static void lcd_implementation_quick_feedback()
     SET_OUTPUT(BEEPER);
     for(int8_t i=0;i<10;i++)
     {
-		WRITE(BEEPER,HIGH);
-		delay(3);
-		WRITE(BEEPER,LOW);
-		delay(3);
+		// Beep note selection using pitches.h
+		tone(BEEPER,NOTE_C6);
+                delay(10);
+		noTone(BEEPER);
     }
 #endif
 }
